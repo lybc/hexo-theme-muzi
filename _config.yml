@@ -1,0 +1,26 @@
+
+menu:
+  home:
+    text: 主页
+    url: /
+  archives:
+    url: /archives
+  tags:
+    url: /tags
+  th-list:
+    text: Categories
+    url: /categories
+  github:
+    url: https://github.com/yscoder
+    target: _blank
+  weibo:
+    url: http://www.weibo.com/ysweb
+    target: _blank
+  link:
+    text: 测试
+    url: /custom
+
+less:
+  compress: true
+  paths:
+    - source/styles/index.less
