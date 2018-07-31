@@ -1,7 +1,14 @@
 @import (css) "../semantic/dist/semantic.css";
 // @import "../_semantic/src/theme.less";
+@import "_partial/index.less";
 @import "_partial/nav.less";
 
+@menuWidth: 21rem;
 .ui.vertical.menu {
-    width: 18rem;
+    width: @menuWidth;
+}
+
+.main {
+    position: relative;
+    padding-left: @menuWidth;
 }

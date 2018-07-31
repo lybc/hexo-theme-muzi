@@ -1,0 +1,21 @@
+<div class="item">
+    <div class="content">
+      <a class="header" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      <div class="description">
+        <% if(theme.excerpt_render) { %>
+            <%- post.excerpt || post.content %>
+        <% } else { %>
+            <%- post.excerpt ? strip_html(post.excerpt) : truncate(strip_html(post.content), {
+                length: theme.excerpt_length
+            }) %>
+        <% } %>
+      </div>
+      <div class="extra">
+      <% if (post.tags && post.tags.length){ %>
+        <% post.tags.forEach(function (item) { %>
+            <div class="ui label"><%= item.name %></div>
+        <% }); %>
+      <% } %>
+      </div>
+    </div>
+</div>
