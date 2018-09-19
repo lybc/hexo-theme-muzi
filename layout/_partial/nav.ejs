@@ -8,33 +8,55 @@
             </div>
         </h3>
 
-        <a class="ui circular github mini icon button">
+        
+
+        <% if(config.social.github) { %>
+        <a class="ui circular github mini icon button" target="_blank" href="<%- url_for(config.social.github) %>">
             <i class="github icon"></i>
         </a>
-        <a class="ui circular google plus mini icon button">
+        <% } %>
+
+        <% if(config.social.google) { %>
+        <a class="ui circular google plus mini icon button" target="_blank" href="<%- url_for(config.social.google) %>">
             <i class="google plus icon"></i>
         </a>
-        <a class="ui circular facebook mini icon button">
+        <% } %>
+
+        <% if(config.social.facebook) { %>
+        <a class="ui circular facebook mini icon button" target="_blank" href="<%- url_for(config.social.facebook) %>">
             <i class="facebook icon"></i>
         </a>
-        <a class="ui circular green mini icon button">
+        <% } %>
+
+        <% if(config.social.wechat) { %>
+        <a class="ui circular green mini icon button" target="_blank" href="<%- url_for(config.social.wechat) %>">
             <i class="wechat icon"></i>
         </a>
-        <a class="ui circular red mini icon button">
+        <% } %>
+
+        <% if(config.social.weibo) { %>
+        <a class="ui circular red mini icon button" target="_blank" href="<%- url_for(config.social.weibo) %>">
             <i class="weibo icon"></i>
         </a>
-        <a class="ui circular brown mini icon button">
+        <% } %>
+
+        <% if(config.social.stackoverflow) { %>
+        <a class="ui circular brown mini icon button" target="_blank" href="<%- url_for(config.social.stackoverflow) %>">
             <i class="stack overflow icon"></i>
         </a>
-        <a class="ui circular grey mini icon button">
+        <% } %>
+
+        <% if(config.social.email) { %>
+        <a class="ui circular grey mini icon button" target="_blank" href="mailto:<%- url_for(config.social.email) %>">
             <i class="mail outline icon"></i>
         </a>
+        <% } %>
         
     </div>
     
     <% 
-        for (var index in config.menu) {
-            var menuItem = config.menu[index];
+        for (var index in theme.menu) {
+            var menuItem = theme.menu[index];
     %>
         <a class="item" href="<%- url_for(menuItem.url) %>">
             <%= menuItem.text %>
