@@ -4,8 +4,6 @@ menu:
     text: 主页
     url: /
 
-
-
 less:
   compress: true
   paths:
